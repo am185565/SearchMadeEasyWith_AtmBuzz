@@ -1,0 +1,43 @@
+<!-- <style id="" media="all">
+    body
+    {
+    background-image: url('atm1.png');
+    }
+</style> -->
+<!-- <body></body> -->
+<div>
+<h1 style="text-align:center;color:rgb(0, 0, 0);margin-top: 4em;">Register</h1>
+<form name="form" ng-submit="vm.register()" role="form">
+<div class="form-group" ng-class="{ 'has-error': form.firstName.$dirty && form.firstName.$error.required }" style="width:40%;position:absolute; left:500px; top:100px;font-size: large;">
+<label for="username">First name</label>
+<input type="text" name="firstName" id="firstName" class="form-control" ng-model="vm.user.firstName" required />
+<span ng-show="form.firstName.$dirty && form.firstName.$error.required" class="help-block">First name is required</span>
+</div>
+
+<div class="form-group" ng-class="{ 'has-error': form.lastName.$dirty && form.lastName.$error.required }" style="width:40%;position:absolute; left:500px; top:175px;font-size: large;">
+<label for="username">Last name</label>
+<input type="text" name="lastName" id="Text1" class="form-control" ng-model="vm.user.lastName" required />
+<span ng-show="form.lastName.$dirty && form.lastName.$error.required" class="help-block">Last name is required</span>
+</div>
+
+<div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }" style="width:40%;position:absolute; left:500px; top:250px;font-size: large;">
+<label for="username">Username</label>
+<input type="text" name="username" id="username" class="form-control" ng-model="vm.user.username" required />
+<span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Username is required</span>
+</div>
+
+<div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }" style="width:40%;position:absolute; left:500px; top:325px;font-size: large;">
+<label for="password">Password</label>
+<input type="password" name="password" id="password" class="form-control" ng-model="vm.user.password" required />
+<span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
+</div>
+
+<div class="form-actions">
+<button style="width:20%;position:absolute; left:500px; top:400px;font-size: large;" type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary">Register</button>
+<a style="width:20%;position:absolute; left:900px; top:400px;font-size: larger;" href="#!/" class="btn btn-link">Cancel</a> <!--navigate back to login.html-->
+</div>
+
+</form>
+</div>
+    
+<!-- </body> -->

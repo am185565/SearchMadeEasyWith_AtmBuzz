@@ -1,0 +1,38 @@
+<!-- login.html-->
+<!-- <head>
+    <meta charset="utf-8">
+    <title>Paper Stack</title>
+    <link rel="stylesheet" type="text/css" href="style1.css" />
+        <style id="" media="all">
+            body
+            {
+            background-image: url('atm1.png');
+            }
+        </style>
+</head> -->
+<div style="align-items:center">
+<h1 style="text-align:center;color:rgb(0, 0, 0);margin-top: 4em;">Login</h1>
+
+<form name="form" ng-submit="vm.login()" role="form">
+
+<div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }" style="width:40%;position:absolute; left:500px; top:100px;font-size: large;">
+<label for="username">Username</label>
+<input type="text" name="username" id="username" class="form-control" ng-model="vm.username" style="margin: auto;
+display: block" required />
+<span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">Username is required</span>
+</div>
+
+<div class="form-group" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }" style="width:40%;position:absolute; left:500px; top:200px;font-size: large;">
+<label for="password">Password</label>
+<input type="password" name="password" id="password" class="form-control" ng-model="vm.password" required />
+<span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
+</div>
+
+<div class="form-actions" layout="row">
+<button type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary" style="width:15%;position:absolute; left:500px; top:300px;font-size: large;">Login</button>
+<span style="position:absolute; left:900px; top:300px;font-size: large;">Not a member?<a href="#!/register" class="btn btn-link" style="font-size: large;">Register</a></span>
+</div>
+
+</form>
+</div>
+</body>
